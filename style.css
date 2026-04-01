@@ -1,0 +1,859 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/* Color variables */
+:root {
+    --green-100: rgb(249 255 233);
+    --green-200: rgb(153 182 0);
+    --green-300: rgb(24 127 78);
+    --green-400: rgb(18 66 36);
+    --green-400-hover: rgb(14 53 29);
+    --green-400-active: rgb(11 40 22);
+    --yellow-100: rgb(255 231 139);
+    --gray-100: rgb(227 228 214);
+    --white: rgb(255 255 255);
+    --nav-height: 120px;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-family:
+        "Montserrat",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 10ex;
+}
+
+/* Container Utility */
+.container {
+    max-width: 1440px;
+    margin-inline: auto; /* Centers the container */
+    width: 100%;
+}
+
+/* Ensure sections with padding keep it on small screens */
+@media only screen and (max-width: 767px) {
+    .main-section:not(#about),
+    .cta-section,
+    footer,
+    .nav-menu {
+        padding-inline: 20px; /* Prevents text hitting screen edges on mobile */
+    }
+}
+
+/* Nav */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    height: var(--nav-height);
+    background-color: var(--green-100);
+    width: 100%;
+}
+
+.header-image {
+    height: 120px;
+    max-width: 120px;
+}
+
+.header-image img {
+    height: 100%;
+    width: auto;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-menu menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--green-400);
+    padding: 0 64px 0 0;
+}
+.nav-menu menu li a {
+    text-decoration: none;
+}
+.nav-menu menu li a:is(:hover, :focus-visible) {
+    text-decoration: underline;
+}
+
+/* Base style: Hide hamburger on large screens */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--green-400);
+    padding: 24px;
+    z-index: 2000; /* Keeps it above the menu overlay */
+}
+
+.hamburger-btn svg path {
+    fill: var(--green-400);
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 1024px) {
+    .hamburger-btn {
+        display: block;
+    }
+
+    .hamburger-btn .close-icon {
+        display: none;
+    }
+
+    /* When the menu is open (aria-expanded is true) */
+    .hamburger-btn[aria-expanded="true"] .open-icon {
+        display: none;
+    }
+
+    .hamburger-btn[aria-expanded="true"] .close-icon {
+        display: block;
+    }
+
+    /* Reset padding on mobile nav */
+    .nav-menu menu {
+        padding: 0;
+    }
+
+    /* Turn the menu into a fixed sidebar */
+    .nav-menu menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide it completely off-screen to the right */
+        height: 100vh;
+        width: 100%;
+        max-width: 400px; /* Limits width on landscape tablets */
+        background-color: var(--green-100);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out; /* Smooth sliding animation */
+        z-index: 1500;
+    }
+
+    /* Class added by JS to slide the menu in */
+    .nav-menu menu.is-open {
+        right: 0;
+    }
+
+    /* Make links bigger and easier to tap on mobile */
+    .nav-menu menu li a {
+        font-size: 1.5rem;
+    }
+}
+
+.main-section:not(#about, #difference) {
+    padding: 64px;
+}
+
+/* Hero styles */
+.hero {
+    background-color: var(--green-100);
+    padding: calc(var(--nav-height) + 64px) 64px 64px 64px;
+    --content-width: 24ch;
+    position: relative;
+}
+
+.hero-heading {
+    font-size: 4.5rem;
+    color: var(--green-300);
+    display: block;
+    max-width: var(--content-width);
+    margin-bottom: 32px;
+    text-wrap: auto;
+}
+
+.hero-heading--accent {
+    color: var(--green-200);
+    display: block;
+}
+
+.hero-subheading {
+    color: var(--green-400);
+    font-size: 1.5rem;
+    display: block;
+    font-weight: 700;
+}
+.hero .subheader-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 16px;
+}
+
+/* Remove the hardcoded max() width */
+.hero-image {
+    width: 100%;
+}
+
+/* Let the wrapper sit normally in the grid */
+.hero-image.subheader-image-wrapper {
+    display: flex;
+    align-items: flex-end; /* Aligns the image to the bottom if the text side is taller */
+    justify-content: flex-end; /* Aligns the image to the right */
+}
+
+/* Remove absolute positioning and clamp widths */
+.hero-image.subheader-image-wrapper img {
+    margin-bottom: -192px;
+
+    width: 100%; /* Fills the container */
+    max-width: 800px; /* Cap the size so it doesn't get ridiculously huge */
+    object-fit: contain;
+}
+
+/* About section */
+
+.main-section#about {
+    background-color: var(--green-300);
+}
+
+.main-section#about .container {
+    display: flex;
+    max-height: 800px;
+    align-items: stretch;
+}
+
+.about-image {
+    flex: 1 1 50%;
+    overflow: hidden;
+}
+
+.about-image picture,
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-description {
+    background-color: var(--green-300);
+    color: var(--white);
+    flex: 1 1 50%;
+    padding: 128px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.about-description p:not(:last-child) {
+    margin-block-end: 1rem;
+}
+
+/* Essence section */
+
+.main-section#essence {
+    background-color: var(--green-400);
+}
+
+.essence-cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(20ch, 1fr) minmax(20ch, 1fr)
+    );
+    place-items: center;
+
+    gap: 16px;
+}
+
+.essence-card {
+    border-radius: 16px;
+    aspect-ratio: 1/1;
+    background-color: var(--yellow-100);
+    color: var(--green-400);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 12px;
+    width: 12ch;
+    text-align: center;
+    height: 100%;
+    margin-block: auto;
+    place-items: center;
+    place-content: center;
+}
+
+/* Operation section */
+
+.main-section#operation {
+    background-color: var(--green-100);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    list-style: none;
+    place-items: center;
+}
+
+.operation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--green-400);
+    max-width: 250px;
+}
+
+.operation-card .card-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+/* Difference section */
+
+.main-section#difference {
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+}
+
+.main-section#difference .background-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-section#difference .background-image img,
+.main-section#difference .background-image picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.main-section#difference .background-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 40, 0, 0.5);
+    z-index: 2;
+}
+
+.main-section#difference .section-content {
+    z-index: 10;
+    position: relative;
+    padding: 64px;
+}
+
+.content-card-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+    padding-top: 40px;
+    place-content: center;
+}
+
+.content-card {
+    border-radius: 32px;
+    background-color: var(--yellow-100);
+    color: var(--green-400);
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 16px;
+    min-height: 100px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-card .card-title {
+    font-weight: 900;
+}
+.content-card .card-content {
+    font-weight: 600;
+}
+
+/*CTA sections*/
+
+.cta-section {
+    --section-padding: 128px;
+    padding: var(--section-padding);
+}
+
+.cta-heading {
+    font-size: 2.5rem;
+}
+
+.adapt-grid {
+    display: grid;
+    gap: 0px;
+    align-items: end;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.adapt-image-wrapper img {
+    object-fit: contain;
+    margin-inline: auto;
+    width: clamp(500px, 50vw, 700px);
+    min-width: 450px;
+}
+
+.adapt-image-wrapper {
+    justify-self: end;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    bottom: calc(var(--section-padding) * -1.5);
+}
+
+/* Contact section*/
+
+.main-section#contact {
+    background-color: var(--green-100);
+}
+
+.main-section#contact .section-heading {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.main-section#contact .section-subheading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green-400);
+    max-width: 30ch;
+    display: block;
+}
+
+.contact-section {
+    display: flex;
+    gap: 32px;
+}
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    margin-top: 40px;
+    flex: 1 1 100%;
+}
+
+.contact-other {
+    flex-basis: 50%;
+}
+
+.contact-other ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.contact-other ul li[data-contact="email"] svg {
+    --bg-color: var(--green-400);
+}
+.contact-other ul li[data-contact="whatsapp"] svg {
+    --bg-color: rgb(37 211 102);
+}
+.contact-other ul li svg {
+    padding: 8px;
+    border-radius: 9999px;
+    background-color: var(--bg-color);
+    width: 48px;
+    height: 48px;
+}
+
+.contact-other ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.contact-other ul li a:hover,
+.contact-other ul li a:focus-visible {
+    text-decoration: underline;
+}
+
+.floating-label-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-label-group input,
+.floating-label-group textarea {
+    width: 100%;
+    padding: 24px 16px 8px;
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-100);
+    border-radius: 999px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.floating-label-group textarea {
+    resize: none;
+    border-radius: 32px;
+}
+
+.floating-label-group label {
+    position: absolute;
+    left: 16px;
+    top: 18px; /* Positioned exactly over the placeholder area */
+    color: #999;
+    pointer-events: none; /* Allows clicks to pass through to the input */
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.floating-label-group input:focus + label,
+.floating-label-group input:not(:placeholder-shown) + label,
+.floating-label-group textarea:focus + label,
+.floating-label-group textarea:not(:placeholder-shown) + label {
+    top: 6px;
+    left: 16px;
+    font-size: 0.75rem;
+    color: var(--green-300); /* Use your brand green here */
+    font-weight: bold;
+}
+
+/* Highlighting the border on focus */
+.floating-label-group input:focus {
+    border-color: var(--green-300);
+}
+
+.error-message {
+    color: #b91c1c; /* A solid red */
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 1em; /* Prevents layout jumping when error appears */
+}
+
+.form-group.has-error input {
+    border-color: #b91c1c;
+}
+
+.form-submit-button {
+    background-color: var(--green-400);
+    color: var(--white);
+    font-weight: 700;
+    width: fit-content;
+    padding: 16px 24px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.form-submit-button:hover,
+.form-submit-button:focus-visible {
+    background-color: var(--green-400-hover);
+}
+
+.form-submit-button:active {
+    background-color: var(--green-400-active);
+}
+
+.website-group {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*Headings*/
+
+.section-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-heading[data-dark="true"] {
+    color: var(--green-400);
+}
+
+.section-heading[data-dark="false"] {
+    color: var(--white);
+}
+
+[data-theme="light"] {
+    background-color: var(--green-100);
+    color: var(--green-400);
+}
+
+[data-theme="dark"] {
+    background-color: var(--green-400);
+    color: var(--green-200);
+}
+
+[data-theme="green"] {
+    color: var(--green-200);
+}
+
+.cta-throughline {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: var(--yellow-100);
+    font-weight: 700;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--green-300);
+    color: var(--white);
+    padding: 32px 64px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.footer-socials .footer-social-icons {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-socials .footer-social-icons li svg {
+    padding: 8px;
+    background-color: rgb(35 31 32);
+    border-radius: 999px;
+    width: 32px;
+    height: 32px;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+.col-2 {
+    grid-column: span 2;
+}
+/* Mid size adjustments */
+
+@media only screen and (max-width: 968px) {
+    .hero .subheader-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-image.hero-image.subheader-image-wrapper img {
+        margin-bottom: 0;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero {
+        padding-inline: 32px;
+    }
+    .hero-heading {
+        font-size: 3rem;
+    }
+    .hero .subheader-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-image.hero-image.subheader-image-wrapper {
+        grid-row: 1;
+    }
+    .main-section#about .container {
+        flex-direction: column;
+    }
+    .about-description {
+        padding: 64px 32px;
+        font-size: 1.25rem;
+    }
+    .main-section:not(#about, #difference),
+    .main-section#difference .section-content {
+        padding: 48px 32px;
+    }
+
+    .card-grid,
+    .content-card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .content-card-grid {
+        padding-top: 24px;
+    }
+    .content-card {
+        font-size: 1.125rem;
+    }
+    .cta-section {
+        --section-padding: 164px;
+        padding-inline: 32px;
+        padding-block: 48px;
+    }
+    .cta-section[data-theme="light"] {
+        padding-bottom: 128px;
+    }
+
+    /* Targets the second CTA */
+    .cta-section[data-theme="dark"] {
+        padding-top: 128px;
+    }
+    .adapt-grid {
+        grid-template-columns: 1fr 50px;
+    }
+    .cta-heading {
+        font-size: 2rem;
+    }
+    .cta-throughline {
+        font-size: 2rem;
+    }
+    .section-heading {
+        font-size: 2.5rem;
+    }
+    .main-section#contact .section-subheading {
+        font-size: 1.25rem;
+    }
+    .contact-section {
+        flex-direction: column-reverse;
+    }
+    .contact-other ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .contact-form .col-1 {
+        grid-column: span 2;
+    }
+    footer {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .essence-cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Huerto Regio</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon/favicon-16x16.png"
+        />
+
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+        />
+
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="title" content="Huerto Regio" />
+        <meta
+            name="description"
+            content="Ayudamos a restaurantes a operar mejor
+            con calidad constante, entregas puntuales y precios
+            competitivos"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.huertoregio.mx/" />
+        <meta property="og:title" content="Huerto Regio" />
+        <meta
+            property="og:description"
+            content="Ayudamos a restaurantes a operar mejor
+            con calidad constante, entregas puntuales y precios
+            competitivos"
+        />
+        <meta
+            property="og:image"
+            content="https://www.huertoregio.mx/images/home.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.huertoregio.mx/" />
+        <meta property="twitter:title" content="Huerto Regio" />
+        <meta
+            property="twitter:description"
+            content="Ayudamos a restaurantes a operar mejor
+            con calidad constante, entregas puntuales y precios
+            competitivos"
+        />
+        <meta
+            property="twitter:image"
+            content="https://www.huertoregio.mx/images/home.png"
+        />
+    </head>
+    <body>
+        <header>
+            <nav class="nav-menu container">
+                <div class="header-image">
+                    <picture>
+                        <img
+                            src="/images/home.png"
+                            alt="Huerto Regio Logo"
+                            loading="eager"
+                        />
+                    </picture>
+                </div>
+
+                <button
+                    class="hamburger-btn"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="main-menu"
+                >
+                    <svg
+                        class="open-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path
+                            fill="#ffffff"
+                            fill-rule="evenodd"
+                            d="M20.75 7a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75m0 5a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75m0 5a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    <svg
+                        class="close-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                    >
+                        <!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                        <path
+                            fill="#ffffff"
+                            d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"
+                        />
+                    </svg>
+                </button>
+
+                <menu id="main-menu">
+                    <li><a href="#about">¿Quiénes somos?</a></li>
+                    <li><a href="#essence">Nuestra Esencia</a></li>
+                    <li><a href="#operation">Nuestra Operación</a></li>
+                    <li><a href="#difference">¿Qué nos diferencia?</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </menu>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h1 class="hero-heading">
+                    Más que un proveedor:
+                    <span class="hero-heading--accent"
+                        >un aliado para cocinas profesionales</span
+                    >
+                </h1>
+                <div class="subheader-grid">
+                    <span class="hero-subheading"
+                        >En Huerto Regio ayudamos a restaurantes a operar mejor
+                        con calidad constante, entregas puntuales y precios
+                        competitivos.</span
+                    >
+                    <div class="hero-image subheader-image-wrapper">
+                        <picture>
+                            <source srcset="/images/avocado.webp" />
+                            <img src="/images/avocado.png" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section" id="about">
+                <div class="container">
+                    <div class="about-image">
+                        <picture>
+                            <source srcset="/images/garden.webp" />
+                            <img src="/images/garden.png" alt="" />
+                        </picture>
+                    </div>
+
+                    <div class="about-description">
+                        <p>
+                            Huerto regio es una abastecedora de frutas y
+                            verduras con operación en Nuevo León, especializada
+                            en atender restaurantes y cocinas profesionales que
+                            requieren calidad constante, puntualidad y costos
+                            competitivos.
+                        </p>
+                        <p>
+                            Nacimos en Monterrey con una visión clara:
+                            <strong
+                                >ser un socio confiable en la operación de
+                                nuestros clientes, no solo un proveedor.</strong
+                            >
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="main-section" id="essence">
+                <div class="container">
+                    <h2 class="section-heading" data-dark="false">
+                        Nuestra Esencia
+                    </h2>
+                    <ul class="essence-cards">
+                        <li class="essence-card">Selección rigurosa</li>
+                        <li class="essence-card">
+                            Manejo adecuado del producto
+                        </li>
+                        <li class="essence-card">Entrega puntual</li>
+                        <li class="essence-card">
+                            Relación profesional con el cliente
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section" id="operation">
+                <div class="container">
+                    <h2 class="section-heading" data-dark="true">
+                        Nuestra operación
+                    </h2>
+                    <ul class="card-grid">
+                        <li class="operation-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <!-- Icon from Stash Icons by Pingback LLC - https://github.com/stash-ui/icons/blob/master/LICENSE -->
+                                    <path
+                                        fill="#99b600"
+                                        d="M3.25 5A2.75 2.75 0 0 1 6 2.25h10A2.75 2.75 0 0 1 18.75 5v5.5a.75.75 0 0 1-1.5 0V5c0-.69-.56-1.25-1.25-1.25H6c-.69 0-1.25.56-1.25 1.25v14.382a.25.25 0 0 0 .362.224l1-.5a1.75 1.75 0 0 1 1.832.165l.906.679a.25.25 0 0 0 .3 0l.862-.647a1.75 1.75 0 0 1 1.95-.1l.674.404a.75.75 0 1 1-.772 1.286l-.673-.404a.25.25 0 0 0-.279.014l-.862.647a1.75 1.75 0 0 1-2.1 0l-.906-.68a.25.25 0 0 0-.261-.023l-1 .5a1.75 1.75 0 0 1-2.533-1.565z"
+                                    />
+                                    <path
+                                        fill="#99b600"
+                                        d="M17.5 14.75a2.75 2.75 0 1 0 0 5.5a2.75 2.75 0 0 0 0-5.5m-4.25 2.75a4.25 4.25 0 1 1 8.5 0a4.25 4.25 0 0 1-8.5 0m6.093-1.405a.75.75 0 0 1 0 1.06l-2.28 2.28l-1.406-1.405a.75.75 0 1 1 1.06-1.06l.346.344l1.22-1.22a.75.75 0 0 1 1.06 0M6.25 7A.75.75 0 0 1 7 6.25h6.5a.75.75 0 0 1 0 1.5H7A.75.75 0 0 1 6.25 7m0 3A.75.75 0 0 1 7 9.25h8a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m0 3a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75m0 3a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5H7a.75.75 0 0 1-.75-.75"
+                                    />
+                                </svg>
+                            </div>
+                            <span>Facturación formal</span>
+                        </li>
+                        <li class="operation-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <!-- Icon from Material Symbols Light by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                                    <path
+                                        fill="#99b600"
+                                        d="M5.73 18.27Q5 17.537 5 16.5H2.77l.218-1h2.268q.271-.667.875-1.084Q6.735 14 7.5 14t1.37.416q.603.417.874 1.084h4.618L16.558 6H5.608l.023-.098q.073-.392.38-.647T6.735 5h11.073l-.81 3.5h2.079l2.712 3.616l-.866 4.384h-1.154q0 1.039-.73 1.77t-1.77.73t-1.769-.73t-.73-1.77H10q0 1.039-.73 1.77T7.5 19t-1.77-.73m10.157-5.02h4.652l.177-.89l-2.139-2.86h-1.818zm.429-6.248L16.558 6l-2.197 9.5l.243-1.002l.792-3.496zM1.672 12.998l.25-1h4.48l-.25 1zm2-3.496l.25-1h5.48l-.25 1zM7.5 18q.617 0 1.059-.441Q9 17.117 9 16.5t-.441-1.059T7.5 15t-1.059.441Q6 15.883 6 16.5t.441 1.059Q6.883 18 7.5 18m9.77 0q.617 0 1.058-.441q.441-.442.441-1.059t-.441-1.059T17.269 15t-1.058.441q-.442.442-.442 1.059t.441 1.059q.442.441 1.06.441"
+                                    />
+                                </svg>
+                            </div>
+                            <span>Flotilla propia de reparto</span>
+                        </li>
+                        <li class="operation-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                                    <path
+                                        fill="#99b600"
+                                        d="M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v6.375l-2 2V10H5v10h6.2l2 2zm11.55.5L13 18.95l1.4-1.4l2.125 2.125l4.25-4.25l1.4 1.425z"
+                                    />
+                                </svg>
+                            </div>
+                            <span>Servicio los 365 días del año</span>
+                        </li>
+                        <li class="operation-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 15 15"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <!-- Icon from Temaki by Bryan Housel - https://creativecommons.org/publicdomain/zero/1.0/ -->
+                                    <path
+                                        fill="#99b600"
+                                        d="M11 0v6s-1-.75-1.5-.75c-.75 0-1.25 1-.5 1.75l2 2v2.5H4V0zM4.5 9.5V11H6q0-1.5-1.5-1.5m6 0Q9 9.5 9 11h1.5zm-3.25-5C5.99 4.5 5.5 5.17 5.5 6S6 7.5 7.25 7.5c1 0 1.25-.5 1.25-.5c-.5-.75-.25-1.5.25-2c0 0-.5-.5-1.5-.5m3.25-4H9Q9 2 10.5 2zM6 .5H4.5V2Q6 2 6 .5"
+                                    />
+                                    <path
+                                        fill="#99b600"
+                                        d="m3.5 11l1 1h6l1-1V9S9.22 6.95 9 6.5C8.75 6 9 5 10.5 6c.93.62 2 1.5 2.5 2s1 3 1 4s-2 3-2 3H8s-1.87-1.15-3-2c-4-3-4-5-1.5-3.5C1 8 .5 6 3.5 7.5c-3-1.5-3-3.5 0-2C.5 4 2 3 3.5 3.75z"
+                                    />
+                                </svg>
+                            </div>
+                            <span
+                                >Crédito de una semana para clientes
+                                establecidos</span
+                            >
+                        </li>
+                        <li class="operation-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                                    <g
+                                        fill="none"
+                                        stroke="#99b600"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                    >
+                                        <path
+                                            d="M2.25 2.25h19.5s1.5 0 1.5 1.5v18s0 1.5-1.5 1.5H2.25s-1.5 0-1.5-1.5v-18s0-1.5 1.5-1.5m3-1.5v3m13.5-3v3m-6 14.25h4.5m-4.5-7.5h4.5"
+                                        />
+                                        <path
+                                            d="m9.9 15.3l-3.15 4.2l-2.25-2.25M9.9 7.5l-3.15 4.2L4.5 9.45"
+                                        />
+                                    </g>
+                                </svg>
+                            </div>
+                            <span>Pedidos diarios y programados</span>
+                        </li>
+                        <li class="operation-card">
+                            <div class="card-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE -->
+                                    <g
+                                        fill="none"
+                                        stroke="#99b600"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            d="M9 14c0 1.657 2.686 3 6 3s6-1.343 6-3s-2.686-3-6-3s-6 1.343-6 3"
+                                        />
+                                        <path
+                                            d="M9 14v4c0 1.656 2.686 3 6 3s6-1.344 6-3v-4M3 6c0 1.072 1.144 2.062 3 2.598s4.144.536 6 0S15 7.072 15 6s-1.144-2.062-3-2.598s-4.144-.536-6 0S3 4.928 3 6"
+                                        />
+                                        <path d="M3 6v10c0 .888.772 1.45 2 2" />
+                                        <path d="M3 11c0 .888.772 1.45 2 2" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <span>Precios pactados semanalmente</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section" id="difference">
+                <div class="container">
+                    <div class="background-image">
+                        <picture>
+                            <source srcset="/images/produce.webp" />
+                            <img
+                                src="/images/produce.png"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </picture>
+                    </div>
+                    <div class="section-content">
+                        <h2 class="section-heading" data-dark="false">
+                            ¿Qué nos diferencía?
+                        </h2>
+                        <ul class="content-card-grid">
+                            <li class="content-card">
+                                <h3 class="card-title">Calidad constante</h3>
+                                <span class="card-content"
+                                    >El producto mantiene el mismo estándar
+                                    todos los días.</span
+                                >
+                            </li>
+                            <li class="content-card">
+                                <h3 class="card-title">Relación profesional</h3>
+                                <span class="card-content"
+                                    >Trabajamos como aliados de la cocina.</span
+                                >
+                            </li>
+                            <li class="content-card">
+                                <h3 class="card-title">
+                                    Puntualidad y confiabilidad
+                                </h3>
+                                <span class="card-content"
+                                    >Acuerdos claros y entregas cumplidas</span
+                                >
+                            </li>
+                            <li class="content-card">
+                                <h3 class="card-title">
+                                    Precio justo y competitivo
+                                </h3>
+                                <span class="card-content"
+                                    >Procesos optimizados para calidad
+                                    sostenida.</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="cta-section" data-theme="light">
+                <div class="container">
+                    <div class="adapt-grid">
+                        <h2 class="cta-heading" data-dark="true">
+                            Nos adaptamos a la dinámica de cada cocina,
+                            ofreciendo una respuesta rápida y eficiente ante
+                            necesidades adicionales y urgentes, para mantener su
+                            operación siempre en marcha.
+                        </h2>
+                        <div class="adapt-image-wrapper">
+                            <picture>
+                                <source srcset="/images/veggie-stack.webp" />
+                                <img
+                                    src=""
+                                    alt="/images/veggie-stack.png"
+                                    loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cta-section" data-theme="dark">
+                <div class="container">
+                    <h2 class="cta-heading" data-theme="green">
+                        Nuestro compromiso es entregar producto de calidad, en
+                        tiempo y bajo condiciones claras, para que la operación
+                        de nuestros clientes nunca se detenga.
+                    </h2>
+                    <span class="cta-throughline"
+                        >La calidad no se improvisa, se sostiene.</span
+                    >
+                </div>
+            </section>
+            <section class="main-section" id="contact">
+                <div class="container">
+                    <h2 class="section-heading" data-dark="true">Escríbenos</h2>
+                    <span class="section-subheading"
+                        >Cotiza con nosostros y asegura calidad y puntualidad en
+                        tu cocina.</span
+                    >
+                    <div class="contact-section">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group floating-label-group col-1">
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder=" "
+                                    required
+                                />
+                                <label for="name">Nombre</label>
+                                <div
+                                    class="error-message"
+                                    aria-live="polite"
+                                ></div>
+                            </div>
+                            <div class="form-group floating-label-group col-1">
+                                <input
+                                    type="email"
+                                    placeholder=" "
+                                    id="email"
+                                    name="email"
+                                    data-error="Escriba una dirección de correo válida."
+                                    required
+                                />
+                                <label for="email">Correo</label>
+                                <div
+                                    class="error-message"
+                                    aria-live="polite"
+                                ></div>
+                            </div>
+                            <div class="form-group floating-label-group col-2">
+                                <input
+                                    type="text"
+                                    placeholder=" "
+                                    id="phone"
+                                    name="phone"
+                                    data-error="Escriba un número de teléfono válido (10 digitos)"
+                                    inputmode="numeric"
+                                    pattern="[0-9 ]*"
+                                    maxlength="12"
+                                />
+                                <label for="phone">Teléfono</label>
+                                <div
+                                    class="error-message"
+                                    aria-live="polite"
+                                ></div>
+                            </div>
+                            <div
+                                class="form-group website-group"
+                                aria-hidden="true"
+                            >
+                                <label for="website_url">Website URL</label>
+                                <input
+                                    type="text"
+                                    id="website_url"
+                                    name="website_url"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                />
+                            </div>
+                            <input
+                                type="hidden"
+                                id="form_start_time"
+                                name="form_start_time"
+                                value=""
+                            />
+                            <div class="form-group floating-label-group col-2">
+                                <textarea
+                                    type="text"
+                                    placeholder=" "
+                                    id="message"
+                                    name="message"
+                                ></textarea>
+                                <label for="message">Mensaje</label>
+
+                                <div
+                                    class="error-message"
+                                    aria-live="polite"
+                                ></div>
+                            </div>
+                            <button type="submit" class="form-submit-button">
+                                Enviar
+                            </button>
+                        </form>
+                        <div class="contact-other">
+                            <ul>
+                                <li data-contact="whatsapp">
+                                    <a
+                                        href="https://wa.me/528123315769"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Enviar mensaje de WhatsApp al 8123315769"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <path
+                                                fill="#ffffff"
+                                                d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
+                                            />
+                                        </svg>
+                                        <span>8123315769</span>
+                                    </a>
+                                </li>
+                                <li data-contact="email">
+                                    <a
+                                        href="mailto:ventas@huertoregio.mx"
+                                        target="_blank"
+                                        aria-label="Enviar correo electrónico a ventas@huertoregio.mx"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                                            <path
+                                                fill="#ffffff"
+                                                d="M2 20V4h20v16zm10-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z"
+                                            />
+                                        </svg>
+                                        ventas@huertoregio.mx
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-legend">
+                © Huerto Regio. All rights reserved.
+            </div>
+            <div class="footer-socials">
+                <menu class="footer-social-icons">
+                    <li>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                        >
+                            <!-- Icon from Basil by Craftwork - https://creativecommons.org/licenses/by/4.0/ -->
+                            <path
+                                fill="#ffffff"
+                                d="M14.2 2.875A4.625 4.625 0 0 0 9.575 7.5v2.575H7.1c-.124 0-.225.1-.225.225v3.4c0 .124.1.225.225.225h2.475V20.9c0 .124.1.225.225.225h3.4c.124 0 .225-.1.225-.225v-6.975h2.497c.103 0 .193-.07.218-.17l.85-3.4a.225.225 0 0 0-.218-.28h-3.347V7.5a.775.775 0 0 1 .775-.775h2.6c.124 0 .225-.1.225-.225V3.1c0-.124-.1-.225-.225-.225z"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                        >
+                            <!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+                            <path
+                                fill="#ffffff"
+                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <a
+                            href="https://wa.me/528123315769"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Enviar mensaje de WhatsApp al 8123315769"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path
+                                    fill="#ffffff"
+                                    d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </menu>
+            </div>
+        </footer>
+    </body>
+</html>
+
+<script src="/index.js" defer></script>
