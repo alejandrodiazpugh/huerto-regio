@@ -25,6 +25,7 @@
         />
 
         <link rel="manifest" href="./site.webmanifest" />
+        <link rel="preconnect" href="https://challenges.cloudflare.com" />
 
         <link rel="icon" href="./favicon.ico" />
         <meta name="title" content="Huerto Regio" />
@@ -521,6 +522,13 @@
                             <button type="submit" class="form-submit-button">
                                 Enviar
                             </button>
+                            <div
+                                class="cf-turnstile challenge"
+                                data-sitekey="0x4AAAAAAC2SETt7Rs8KUPrt"
+                                data-theme="light"
+                                data-size="normal"
+                                data-callback="onSuccess"
+                            ></div>
                         </form>
                         <div class="contact-other">
                             <ul>
@@ -637,3 +645,8 @@
 </html>
 
 <script src="./index.js" defer></script>
+<script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+></script>

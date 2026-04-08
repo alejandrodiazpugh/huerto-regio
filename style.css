@@ -574,6 +574,11 @@ header {
     flex: 1 1 100%;
 }
 
+.contact-form .challenge {
+    grid-column: 1 / -1;
+    margin-top: 24px;
+}
+
 .contact-other {
     flex-basis: 50%;
 }
