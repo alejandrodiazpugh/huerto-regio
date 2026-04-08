@@ -170,6 +170,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .nav-menu menu {
@@ -431,7 +432,6 @@ header {
 /*Janky workaround*/
 .operation-card:nth-child(4) span {
     text-wrap: stable;
-    -webkit-line-clamp: 2;
 }
 
 .operation-card .card-icon svg {
