@@ -176,7 +176,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.5rem;
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--green-400);
@@ -184,6 +184,7 @@ header {
 }
 .nav-menu menu li a {
     text-decoration: none;
+    text-wrap: nowrap;
 }
 .nav-menu menu li a:is(:hover, :focus-visible) {
     text-decoration: underline;
@@ -286,7 +287,7 @@ header {
 
 .hero-subheading {
     color: var(--green-400);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     display: block;
     font-weight: 700;
 }
@@ -313,7 +314,8 @@ header {
     margin-bottom: -192px;
 
     width: 100%; /* Fills the container */
-    max-width: 800px; /* Cap the size so it doesn't get ridiculously huge */
+    min-width: 600px;
+    max-width: 900px; /* Cap the size so it doesn't get ridiculously huge */
     object-fit: contain;
 }
 
@@ -355,6 +357,10 @@ header {
 
 .about-description p:not(:last-child) {
     margin-block-end: 1rem;
+}
+
+.about-description p > strong {
+    display: block;
 }
 
 /* Essence section */
@@ -418,9 +424,19 @@ header {
     max-width: 250px;
 }
 
+.operation-card span {
+    text-wrap: balance;
+}
+
+/*Janky workaround*/
+.operation-card:nth-child(4) span {
+    text-wrap: stable;
+    -webkit-line-clamp: 2;
+}
+
 .operation-card .card-icon svg {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
 }
 
 /* Difference section */
@@ -500,6 +516,7 @@ header {
 
 .cta-heading {
     font-size: 2.5rem;
+    line-height: 1.3;
 }
 
 .adapt-grid {
@@ -514,7 +531,7 @@ header {
     object-fit: contain;
     margin-inline: auto;
     width: clamp(500px, 50vw, 700px);
-    min-width: 450px;
+    min-width: 600px;
 }
 
 .adapt-image-wrapper {
@@ -591,6 +608,8 @@ header {
     align-items: center;
     text-decoration: none;
     gap: 12px;
+    font-weight: 600;
+    font-size: 1.175rem;
 }
 
 .contact-other ul li a:hover,
@@ -825,6 +844,13 @@ footer {
     .adapt-grid {
         grid-template-columns: 1fr 50px;
     }
+    .adapt-image-wrapper {
+        align-items: center;
+    }
+    .adapt-image-wrapper img {
+        min-width: 400px;
+        width: 400px;
+    }
     .cta-heading {
         font-size: 2rem;
     }
@@ -855,5 +881,12 @@ footer {
 @media only screen and (max-width: 500px) {
     .essence-cards {
         grid-template-columns: 1fr;
+    }
+    .adapt-image-wrapper {
+        bottom: calc(var(--section-padding) * -2.35);
+    }
+    .adapt-image-wrapper img {
+        min-width: 300px;
+        width: 300px;
     }
 }
